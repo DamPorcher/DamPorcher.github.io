@@ -7,17 +7,21 @@
 </head>
 
 <script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // N'anime qu'une seule fois
-      }
-    });
-  });
+  document.addEventListener("DOMContentLoaded", () => {
+    const cvSection = document.querySelector('.cv-section');
 
-  document.querySelectorAll('.fade-in-on-scroll').forEach(section => {
-    observer.observe(section);
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // ✅ Ne l’anime qu’une seule fois
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    observer.observe(cvSection);
   });
 </script>
 
@@ -74,7 +78,7 @@
 
 
 <!-- Section CV -->
-<section id="cv" style="margin-top: 80px;" class="fade-in-on-scroll"  >
+<section id="cv" style="margin-top: 80px;" class="cv-section hidden"  >
   <h2>Curriculum Vitae</h2>
 <iframe src="Images/CV1.pdf" width="100%" height="600px" style="border:none;"></iframe>
 </section>

@@ -106,14 +106,13 @@ nav ul li a:hover {
   color: #3498db;
 }
 
-/* Animation d'apparition */
-.fade-in-on-scroll {
+.hidden {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.fade-in-on-scroll.visible {
+.visible {
   opacity: 1;
   transform: translateY(0);
 }
