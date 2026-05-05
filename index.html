@@ -233,6 +233,28 @@
     align-items: start;
   }
 
+  .profile-photo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .profile-photo {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 1px solid var(--border-hover);
+    flex-shrink: 0;
+    filter: grayscale(20%);
+    transition: filter 0.3s;
+  }
+  .profile-photo:hover { filter: grayscale(0%); }
+  .profile-name-block { display: flex; flex-direction: column; gap: 4px; }
+  .profile-name { font-family: var(--font-serif); font-size: 1.4rem; color: var(--text); font-weight: 400; }
+  .profile-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--accent2); }
+
   .about-text p { color: var(--text-muted); margin-bottom: 1rem; }
 
   .interests-list {
@@ -545,6 +567,13 @@
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
+        <div class="profile-photo-wrap">
+          <img src="Images/photo_profil.jpg" alt="Photo de profil" class="profile-photo">
+          <div class="profile-name-block">
+            <span class="profile-name">Prénom Nom</span>
+            <span class="profile-title">Doctorant · IA &amp; Machine Learning</span>
+          </div>
+        </div>
         <h2>Recherche &amp;<br><em>Intérêts</em></h2>
         <p>Je développe des méthodes d'apprentissage machine interprétables pour résoudre les problèmes d'interprétation et de robustesse à l'aide de méthodes mathématiques.</p>
         <p>Mes travaux s'inscrivent à l'intersection de la théorie de l'apprentissage statistique et de l'IA digne de confiance.</p>
@@ -642,7 +671,7 @@ Time Series Classification</div>
           <div class="cv-role">CPGE MPSI &amp; MP</div>
           <div class="cv-org">Lycée Pothier</div>
         </div>
-        <a href="cv.pdf" class="cv-download" download>
+        <a href="Images/cv.pdf" class="cv-download" download>
           <span>↓</span> Télécharger le CV complet (PDF)
         </a>
       </div>
