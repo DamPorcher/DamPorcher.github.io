@@ -44,7 +44,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-image: src("Images/background.png");
     pointer-events: none;
     z-index: 0;
     opacity: 0.4;
@@ -624,23 +624,66 @@
       <span class="section-label">02 · Publications</span>
       <span class="section-line"></span>
     </div>
+
     <div class="pub-list">
 
+      <!-- Publication 1 -->
       <a class="pub-item reveal" href="articles/article1.pdf" target="_blank">
-        <span class="pub-year">2024</span>
+        <span class="pub-year">2026</span>
         <div class="pub-content">
           <div class="pub-venue">à paraître dans KBS</div>
-          <div class="pub-title">A Taxonomy of Interpretable Neurosymbolic Models for
-Time Series Classification</div>
-          <div class="pub-desc">A review on neurosymbolic methods for time series classification giving pointers on most promising methods according to me.</div>
+          <div class="pub-title">
+            A Taxonomy of Interpretable Neurosymbolic Models for Time Series Classification
+          </div>
+          <div class="pub-desc">
+            A review on neurosymbolic methods for time series classification giving pointers on most promising methods according to me.
+          </div>
           <div class="pub-links">
             <a class="pub-link" href="articles/article1.pdf" target="_blank">PDF</a>
             <a class="pub-link" href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">arXiv</a>
-            <a class="pub-link" href="https://github.com/tonpseudo/repo" target="_blank">Code</a>
+            <a class="pub-link" href="https://github.com/DamPorcher" target="_blank">Code</a>
           </div>
         </div>
         <span class="pub-arrow">↗</span>
-      </a>     
+      </a>
+
+      <!-- Nouvelle publication -->
+      <a class="pub-item reveal" href="articles/ALSAX.pdf" target="_blank">
+        <span class="pub-year">2026</span>
+        <div class="pub-content">
+          <div class="pub-venue">ECML-PKDD AALTD workshop </div>
+          <div class="pub-title">
+            ALSAX: Alternative Empirical SAX for Time Series Symbolic Representation
+          </div>
+          <div class="pub-desc">
+            ALSAX enables the use of SAX into Neurosymbolic pipelines
+            replacing the usual global average pooling layer before the
+            classifier with a differentiable symbolization method.
+            The symbolization is done through a density that ALSAX to be
+            learned or modified to integrate knowledge into the
+            symbolization.
+          </div>
+          <div class="pub-links">
+            <div class="pub-links">
+              <a class="pub-link"
+                href="https://damporcher.github.io/articles/ALSAX.pdf"
+                target="_blank">
+                Read PDF
+              </a>
+
+              <a class="pub-link"
+                href="https://damporcher.github.io/articles/ALSAX.pdf"
+                download="ALSAX.pdf">
+                Download
+              </a>
+            </div>
+            <a class="pub-link" href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">arXiv</a>
+            <a class="pub-link" href="https://github.com/DamPorcher/ALSAX-Alternative-Empirical-SAX-for-Time-series-symbolic-representation" target="_blank">Code</a>
+          </div>
+        </div>
+        <span class="pub-arrow">↗</span>
+      </a>
+
     </div>
   </div>
 </section>
